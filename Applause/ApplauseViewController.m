@@ -30,6 +30,18 @@
             withEvent:(UIEvent *)event
 {
     self.view.backgroundColor = [UIColor redColor];
+    
+//    [SCRequest performMethod:SCRequestMethodGET
+//                  onResource:[NSURL URLWithString:streamURL]
+//             usingParameters:nil
+//                 withAccount:account
+//      sendingProgressHandler:nil
+//             responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+//                 NSError *playerError;
+//                 player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
+//                 [player prepareToPlay];
+//                 [player play];
+//             }];
 }
 
 - (void) touchesEnded:(NSSet *)touches

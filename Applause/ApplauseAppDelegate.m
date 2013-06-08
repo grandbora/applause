@@ -6,9 +6,18 @@
 //  Copyright (c) 2013 Bora Tunca. All rights reserved.
 //
 
+#import "SCUI.h"
 #import "ApplauseAppDelegate.h"
 
+
 @implementation ApplauseAppDelegate
+
++ (void) initialize
+{
+    [SCSoundCloud setClientID:@"fa1fd2df5a17a560f8456aed4016160a"
+                       secret:@"827b5bec5d9d41318b2ee834a26e8d3f"
+                  redirectURL:[NSURL URLWithString:@"applause://oauth"]];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
