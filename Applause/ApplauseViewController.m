@@ -13,13 +13,13 @@
 @end
 
 @implementation ApplauseViewController
-@synthesize playerList;
+@synthesize playerList, applause1Data;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     playerList = [[NSMutableArray alloc] init]; // I don't know what I am doing!
+    [self initializeApplauseData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,11 +42,17 @@
 }
 
 - (void) playSound
+{    
+    NSError *error;
+    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithData:applause1Data error:&error];
+    [player play];
+    [playerList addObject: player];
+    NSLog(@"Number of players :  %d", [playerList count]);
+    //BDNF clear old players
+}
+
+- (void) initializeApplauseData
 {
-    
-    
-    
-    
     NSString *stream_url = @"https://api.soundcloud.com/tracks/96007156/stream?client_id=fa1fd2df5a17a560f8456aed4016160a"; //remove hardcore
     
     [SCRequest performMethod:SCRequestMethodGET
@@ -55,18 +61,9 @@
                  withAccount:nil
       sendingProgressHandler:nil
              responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                 NSError *playerError;
-                 
-                 AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
-                 [player play];
-                 
-                 [playerList addObject: player];
-                 
-//                 player2 = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
-//                 [player2 playAtTime:player.deviceCurrentTime + 0.2];
-                 
+                 applause1Data = data;
+                 NSLog(@"Applause Data LOADED");
              }];
-
 }
 
 - (void) changeToStartColor

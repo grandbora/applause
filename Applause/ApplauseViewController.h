@@ -11,4 +11,5 @@
 
 @interface ApplauseViewController : UIViewController
 @property (nonatomic, strong) NSMutableArray *playerList;
+@property (nonatomic, strong) NSData *applause1Data;
 @end
