@@ -163,7 +163,7 @@
 		840F08F117635D4C00AC50EA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		840F08F317635D5200AC50EA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		840F08F517635D5A00AC50EA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		840F08F717635DC800AC50EA /* SoundCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SoundCloud.bundle; path = CocoaSoundCloudUI/SoundCloud.bundle; sourceTree = "<group>"; };
+		840F08F717635DC800AC50EA /* SoundCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SoundCloud.bundle; path = ../CocoaSoundCloudUI/SoundCloud.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,18 +195,6 @@
 		840F0881176353E200AC50EA = {
 			isa = PBXGroup;
 			children = (
-				840F08BB17635C2400AC50EA /* SoundCloudUI.xcodeproj */,
-				840F08F717635DC800AC50EA /* SoundCloud.bundle */,
-				840F08F517635D5A00AC50EA /* Security.framework */,
-				840F08F317635D5200AC50EA /* QuartzCore.framework */,
-				840F08F117635D4C00AC50EA /* CoreText.framework */,
-				840F08EF17635D4400AC50EA /* CoreLocation.framework */,
-				840F08ED17635D3500AC50EA /* AddressBookUI.framework */,
-				840F08EB17635D2F00AC50EA /* AddressBook.framework */,
-				840F08D617635C6900AC50EA /* OHAttributedLabel.xcodeproj */,
-				840F08CD17635C5C00AC50EA /* OAuth2Client.xcodeproj */,
-				840F08C417635C4200AC50EA /* JSONKit.xcodeproj */,
-				840F08B217635BFA00AC50EA /* SoundCloudAPI.xcodeproj */,
 				840F0893176353E200AC50EA /* Applause */,
 				840F088C176353E200AC50EA /* Frameworks */,
 				840F088B176353E200AC50EA /* Products */,
@@ -224,6 +212,17 @@
 		840F088C176353E200AC50EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				840F08F517635D5A00AC50EA /* Security.framework */,
+				840F08F317635D5200AC50EA /* QuartzCore.framework */,
+				840F08F117635D4C00AC50EA /* CoreText.framework */,
+				840F08EF17635D4400AC50EA /* CoreLocation.framework */,
+				840F08ED17635D3500AC50EA /* AddressBookUI.framework */,
+				840F08EB17635D2F00AC50EA /* AddressBook.framework */,
+				840F08D617635C6900AC50EA /* OHAttributedLabel.xcodeproj */,
+				840F08CD17635C5C00AC50EA /* OAuth2Client.xcodeproj */,
+				840F08C417635C4200AC50EA /* JSONKit.xcodeproj */,
+				840F08B217635BFA00AC50EA /* SoundCloudAPI.xcodeproj */,
+				840F08BB17635C2400AC50EA /* SoundCloudUI.xcodeproj */,
 				840F08B01763596000AC50EA /* AVFoundation.framework */,
 				840F088D176353E200AC50EA /* UIKit.framework */,
 				840F088F176353E200AC50EA /* Foundation.framework */,
@@ -248,6 +247,7 @@
 		840F0894176353E200AC50EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				840F08F717635DC800AC50EA /* SoundCloud.bundle */,
 				840F0895176353E200AC50EA /* Applause-Info.plist */,
 				840F0896176353E200AC50EA /* InfoPlist.strings */,
 				840F0899176353E200AC50EA /* main.m */,
@@ -548,6 +548,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				"VALID_ARCHS[sdk=*]" = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -583,6 +584,7 @@
 				GCC_PREFIX_HEADER = "Applause/Applause-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$PROJECT_DIR/**";
 				INFOPLIST_FILE = "Applause/Applause-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-all_load",
 					"-ObjC",
@@ -599,6 +601,7 @@
 				GCC_PREFIX_HEADER = "Applause/Applause-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$PROJECT_DIR/**";
 				INFOPLIST_FILE = "Applause/Applause-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-all_load",
 					"-ObjC",
@@ -627,6 +630,7 @@
 				840F08AF176353E200AC50EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

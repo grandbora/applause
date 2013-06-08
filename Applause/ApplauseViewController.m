@@ -6,13 +6,14 @@
 //  Copyright (c) 2013 Bora Tunca. All rights reserved.
 //
 
+#import "SCUI.h"
 #import "ApplauseViewController.h"
 
 @interface ApplauseViewController ()
-
 @end
 
 @implementation ApplauseViewController
+@synthesize player;
 
 - (void)viewDidLoad
 {
@@ -31,33 +32,24 @@
 {
     self.view.backgroundColor = [UIColor redColor];
     
-//    [SCRequest performMethod:SCRequestMethodGET
-//                  onResource:[NSURL URLWithString:streamURL]
-//             usingParameters:nil
-//                 withAccount:account
-//      sendingProgressHandler:nil
-//             responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-//                 NSError *playerError;
-//                 player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
-//                 [player prepareToPlay];
-//                 [player play];
-//             }];
+    NSString *stream_url = @"https://api.soundcloud.com/tracks/13158665/stream?client_id=fa1fd2df5a17a560f8456aed4016160a"; //remove hardcore
+    
+    [SCRequest performMethod:SCRequestMethodGET
+                  onResource:[NSURL URLWithString:stream_url]
+             usingParameters:nil
+                 withAccount:nil
+      sendingProgressHandler:nil
+             responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                 NSError *playerError;
+                 player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
+                 [player play];
+             }];
 }
 
 - (void) touchesEnded:(NSSet *)touches
             withEvent:(UIEvent *)event
 {
     self.view.backgroundColor = [UIColor blueColor];
-}
-
-- (IBAction)showMessage
-{
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hello World!"
-                                                      message:@"This is your first UIAlertview message."
-                                                     delegate:nil
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-    [message show];
 }
 
 @end
