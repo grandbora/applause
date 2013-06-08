@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		840F088E176353E200AC50EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840F088D176353E200AC50EA /* UIKit.framework */; };
+		840F0890176353E200AC50EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840F088F176353E200AC50EA /* Foundation.framework */; };
+		840F0892176353E200AC50EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840F0891176353E200AC50EA /* CoreGraphics.framework */; };
+		840F0898176353E200AC50EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 840F0896176353E200AC50EA /* InfoPlist.strings */; };
+		840F089A176353E200AC50EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F0899176353E200AC50EA /* main.m */; };
+		840F089E176353E200AC50EA /* ApplauseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F089D176353E200AC50EA /* ApplauseAppDelegate.m */; };
+		840F08A0176353E200AC50EA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 840F089F176353E200AC50EA /* Default.png */; };
+		840F08A2176353E200AC50EA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840F08A1176353E200AC50EA /* Default@2x.png */; };
+		840F08A4176353E200AC50EA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840F08A3176353E200AC50EA /* Default-568h@2x.png */; };
+		840F08A7176353E200AC50EA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840F08A5176353E200AC50EA /* MainStoryboard.storyboard */; };
+		840F08AA176353E200AC50EA /* ApplauseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F08A9176353E200AC50EA /* ApplauseViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		840F088A176353E200AC50EA /* Applause.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Applause.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		840F088D176353E200AC50EA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		840F088F176353E200AC50EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		840F0891176353E200AC50EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		840F0895176353E200AC50EA /* Applause-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Applause-Info.plist"; sourceTree = "<group>"; };
+		840F0897176353E200AC50EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		840F0899176353E200AC50EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		840F089B176353E200AC50EA /* Applause-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Applause-Prefix.pch"; sourceTree = "<group>"; };
+		840F089C176353E200AC50EA /* ApplauseAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplauseAppDelegate.h; sourceTree = "<group>"; };
+		840F089D176353E200AC50EA /* ApplauseAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplauseAppDelegate.m; sourceTree = "<group>"; };
+		840F089F176353E200AC50EA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		840F08A1176353E200AC50EA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		840F08A3176353E200AC50EA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		840F08A6176353E200AC50EA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		840F08A8176353E200AC50EA /* ApplauseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplauseViewController.h; sourceTree = "<group>"; };
+		840F08A9176353E200AC50EA /* ApplauseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplauseViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		840F0887176353E200AC50EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840F088E176353E200AC50EA /* UIKit.framework in Frameworks */,
+				840F0890176353E200AC50EA /* Foundation.framework in Frameworks */,
+				840F0892176353E200AC50EA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		840F0881176353E200AC50EA = {
+			isa = PBXGroup;
+			children = (
+				840F0893176353E200AC50EA /* Applause */,
+				840F088C176353E200AC50EA /* Frameworks */,
+				840F088B176353E200AC50EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		840F088B176353E200AC50EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				840F088A176353E200AC50EA /* Applause.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		840F088C176353E200AC50EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				840F088D176353E200AC50EA /* UIKit.framework */,
+				840F088F176353E200AC50EA /* Foundation.framework */,
+				840F0891176353E200AC50EA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		840F0893176353E200AC50EA /* Applause */ = {
+			isa = PBXGroup;
+			children = (
+				840F089C176353E200AC50EA /* ApplauseAppDelegate.h */,
+				840F089D176353E200AC50EA /* ApplauseAppDelegate.m */,
+				840F08A5176353E200AC50EA /* MainStoryboard.storyboard */,
+				840F08A8176353E200AC50EA /* ApplauseViewController.h */,
+				840F08A9176353E200AC50EA /* ApplauseViewController.m */,
+				840F0894176353E200AC50EA /* Supporting Files */,
+			);
+			path = Applause;
+			sourceTree = "<group>";
+		};
+		840F0894176353E200AC50EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				840F0895176353E200AC50EA /* Applause-Info.plist */,
+				840F0896176353E200AC50EA /* InfoPlist.strings */,
+				840F0899176353E200AC50EA /* main.m */,
+				840F089B176353E200AC50EA /* Applause-Prefix.pch */,
+				840F089F176353E200AC50EA /* Default.png */,
+				840F08A1176353E200AC50EA /* Default@2x.png */,
+				840F08A3176353E200AC50EA /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		840F0889176353E200AC50EA /* Applause */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 840F08AD176353E200AC50EA /* Build configuration list for PBXNativeTarget "Applause" */;
+			buildPhases = (
+				840F0886176353E200AC50EA /* Sources */,
+				840F0887176353E200AC50EA /* Frameworks */,
+				840F0888176353E200AC50EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Applause;
+			productName = Applause;
+			productReference = 840F088A176353E200AC50EA /* Applause.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		840F0882176353E200AC50EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Applause;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Bora Tunca";
+			};
+			buildConfigurationList = 840F0885176353E200AC50EA /* Build configuration list for PBXProject "Applause" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 840F0881176353E200AC50EA;
+			productRefGroup = 840F088B176353E200AC50EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				840F0889176353E200AC50EA /* Applause */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		840F0888176353E200AC50EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840F0898176353E200AC50EA /* InfoPlist.strings in Resources */,
+				840F08A0176353E200AC50EA /* Default.png in Resources */,
+				840F08A2176353E200AC50EA /* Default@2x.png in Resources */,
+				840F08A4176353E200AC50EA /* Default-568h@2x.png in Resources */,
+				840F08A7176353E200AC50EA /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		840F0886176353E200AC50EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840F089A176353E200AC50EA /* main.m in Sources */,
+				840F089E176353E200AC50EA /* ApplauseAppDelegate.m in Sources */,
+				840F08AA176353E200AC50EA /* ApplauseViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		840F0896176353E200AC50EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				840F0897176353E200AC50EA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		840F08A5176353E200AC50EA /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				840F08A6176353E200AC50EA /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		840F08AB176353E200AC50EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		840F08AC176353E200AC50EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		840F08AE176353E200AC50EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Applause/Applause-Prefix.pch";
+				INFOPLIST_FILE = "Applause/Applause-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		840F08AF176353E200AC50EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Applause/Applause-Prefix.pch";
+				INFOPLIST_FILE = "Applause/Applause-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		840F0885176353E200AC50EA /* Build configuration list for PBXProject "Applause" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				840F08AB176353E200AC50EA /* Debug */,
+				840F08AC176353E200AC50EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		840F08AD176353E200AC50EA /* Build configuration list for PBXNativeTarget "Applause" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				840F08AE176353E200AC50EA /* Debug */,
+				840F08AF176353E200AC50EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 840F0882176353E200AC50EA /* Project object */;
+}
