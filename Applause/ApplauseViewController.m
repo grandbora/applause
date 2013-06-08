@@ -13,12 +13,13 @@
 @end
 
 @implementation ApplauseViewController
-@synthesize player;
+@synthesize playerList;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    playerList = [[NSMutableArray alloc] init]; // I don't know what I am doing!
 }
 
 - (void)didReceiveMemoryWarning
@@ -30,9 +31,23 @@
 - (void) touchesBegan:(NSSet *)touches
             withEvent:(UIEvent *)event
 {
-    self.view.backgroundColor = [UIColor redColor];
+    [self changeToTapColor];
+    [self playSound];
+}
+
+- (void) touchesEnded:(NSSet *)touches
+            withEvent:(UIEvent *)event
+{
+    [self changeToStartColor];
+}
+
+- (void) playSound
+{
     
-    NSString *stream_url = @"https://api.soundcloud.com/tracks/13158665/stream?client_id=fa1fd2df5a17a560f8456aed4016160a"; //remove hardcore
+    
+    
+    
+    NSString *stream_url = @"https://api.soundcloud.com/tracks/96007156/stream?client_id=fa1fd2df5a17a560f8456aed4016160a"; //remove hardcore
     
     [SCRequest performMethod:SCRequestMethodGET
                   onResource:[NSURL URLWithString:stream_url]
@@ -41,15 +56,27 @@
       sendingProgressHandler:nil
              responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                  NSError *playerError;
-                 player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
+                 
+                 AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
                  [player play];
+                 
+                 [playerList addObject: player];
+                 
+//                 player2 = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
+//                 [player2 playAtTime:player.deviceCurrentTime + 0.2];
+                 
              }];
+
 }
 
-- (void) touchesEnded:(NSSet *)touches
-            withEvent:(UIEvent *)event
+- (void) changeToStartColor
 {
     self.view.backgroundColor = [UIColor blueColor];
+}
+
+- (void) changeToTapColor
+{
+    self.view.backgroundColor = [UIColor redColor];
 }
 
 @end

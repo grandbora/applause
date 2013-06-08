@@ -10,6 +10,5 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface ApplauseViewController : UIViewController
-@property (nonatomic, strong) AVAudioPlayer *player;
-
+@property (nonatomic, strong) NSMutableArray *playerList;
 @end
