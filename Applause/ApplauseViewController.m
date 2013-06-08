@@ -26,4 +26,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) touchesBegan:(NSSet *)touches
+            withEvent:(UIEvent *)event
+{
+    self.view.backgroundColor = [UIColor redColor];
+}
+
+- (void) touchesEnded:(NSSet *)touches
+            withEvent:(UIEvent *)event
+{
+    self.view.backgroundColor = [UIColor blueColor];
+}
+
+- (IBAction)showMessage
+{
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hello World!"
+                                                      message:@"This is your first UIAlertview message."
+                                                     delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    [message show];
+}
+
 @end
