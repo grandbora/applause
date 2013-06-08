@@ -17,5 +17,5 @@
 - (IBAction)tapLevel2Catched:(id)sender;
 @property (nonatomic, strong) NSMutableArray *playerList;
 @property (nonatomic, strong) NSMutableArray *levelConfigList;
-@property (nonatomic, strong) NSData *applause1Data;
+@property (nonatomic, strong) NSMutableArray *applauseDataList;
 @end
