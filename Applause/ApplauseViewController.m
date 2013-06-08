@@ -13,13 +13,14 @@
 @end
 
 @implementation ApplauseViewController
-@synthesize playerList, applause1Data;
+@synthesize playerList, applause1Data,lastTapTime;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     playerList = [[NSMutableArray alloc] init]; // I don't know what I am doing!
     [self initializeApplauseData];
+    //write ready GO
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,7 +33,6 @@
             withEvent:(UIEvent *)event
 {
     [self changeToTapColor];
-    [self playSound];
 }
 
 - (void) touchesEnded:(NSSet *)touches
@@ -41,19 +41,50 @@
     [self changeToStartColor];
 }
 
+- (IBAction)tapLevel1Catched:(id)sender {
+    
+    [self changeToStartColor];
+    
+    if (false == [self isTapIntervalReached])
+    {
+        [self playSound];
+    }
+}
+
+
+
+//------PRI
+
+- (BOOL) isTapIntervalReached
+{
+    double currentTapTime = [[NSDate date] timeIntervalSince1970];
+    double interval = currentTapTime - lastTapTime;
+    
+    if (interval > 0.3) {
+        lastTapTime = currentTapTime;
+        return false;
+    }
+
+//    NSLog(@"interval :  %f", interval);
+    return true;
+}
+
 - (void) playSound
 {    
     NSError *error;
     AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithData:applause1Data error:&error];
     [player play];
     [playerList addObject: player];
-    NSLog(@"Number of players :  %d", [playerList count]);
+    //NSLog(@"Number of players :  %d", [playerList count]);
     //BDNF clear old players
 }
 
 - (void) initializeApplauseData
 {
-    NSString *stream_url = @"https://api.soundcloud.com/tracks/96007156/stream?client_id=fa1fd2df5a17a560f8456aed4016160a"; //remove hardcore
+    //66234588
+    //96004778
+    //79675240
+    NSString *stream_url = @"https://api.soundcloud.com/tracks/79675240/stream?client_id=fa1fd2df5a17a560f8456aed4016160a"; //remove hardcore
     
     [SCRequest performMethod:SCRequestMethodGET
                   onResource:[NSURL URLWithString:stream_url]

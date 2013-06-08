@@ -10,6 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface ApplauseViewController : UIViewController
+- (IBAction)tapLevel1Catched:(id)sender;
 @property (nonatomic, strong) NSMutableArray *playerList;
 @property (nonatomic, strong) NSData *applause1Data;
+@property double lastTapTime;
 @end
