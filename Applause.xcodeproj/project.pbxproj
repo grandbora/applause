@@ -18,6 +18,7 @@
 		840F08A4176353E200AC50EA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840F08A3176353E200AC50EA /* Default-568h@2x.png */; };
 		840F08A7176353E200AC50EA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840F08A5176353E200AC50EA /* MainStoryboard.storyboard */; };
 		840F08AA176353E200AC50EA /* ApplauseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F08A9176353E200AC50EA /* ApplauseViewController.m */; };
+		840F08B11763596000AC50EA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840F08B01763596000AC50EA /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		840F08A6176353E200AC50EA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		840F08A8176353E200AC50EA /* ApplauseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplauseViewController.h; sourceTree = "<group>"; };
 		840F08A9176353E200AC50EA /* ApplauseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplauseViewController.m; sourceTree = "<group>"; };
+		840F08B01763596000AC50EA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840F08B11763596000AC50EA /* AVFoundation.framework in Frameworks */,
 				840F088E176353E200AC50EA /* UIKit.framework in Frameworks */,
 				840F0890176353E200AC50EA /* Foundation.framework in Frameworks */,
 				840F0892176353E200AC50EA /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +76,7 @@
 		840F088C176353E200AC50EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				840F08B01763596000AC50EA /* AVFoundation.framework */,
 				840F088D176353E200AC50EA /* UIKit.framework */,
 				840F088F176353E200AC50EA /* Foundation.framework */,
 				840F0891176353E200AC50EA /* CoreGraphics.framework */,
