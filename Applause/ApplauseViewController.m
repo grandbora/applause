@@ -14,12 +14,17 @@
 
 @implementation ApplauseViewController
 @synthesize playerList, applause1Data,lastTapTime;
+@synthesize tapGestureLevel1, tapGestureLevel2;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    playerList = [[NSMutableArray alloc] init]; // I don't know what I am doing!
     [self initializeApplauseData];
+    
+    playerList = [[NSMutableArray alloc] init]; // I don't know what I am doing!
+    [tapGestureLevel1 requireGestureRecognizerToFail:tapGestureLevel2];
+
+
     //write ready GO
 }
 
@@ -47,11 +52,19 @@
     
     if (false == [self isTapIntervalReached])
     {
-        [self playSound];
+        [self playSoundLevel1];
     }
 }
 
-
+- (IBAction)tapLevel2Catched:(id)sender {
+    
+    [self changeToStartColor];
+    
+    if (false == [self isTapIntervalReached])
+    {
+        [self playSoundLevel2];
+    }
+}
 
 //------PRI
 
