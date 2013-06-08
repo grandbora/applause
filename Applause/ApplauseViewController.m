@@ -13,7 +13,7 @@
 @end
 
 @implementation ApplauseViewController
-@synthesize tapGestureLevel1, tapGestureLevel2;
+@synthesize tapGestureLevel1, tapGestureLevel2, tapGestureLevel3;
 @synthesize playerList, levelConfigList, applauseDataList;
 
 - (void)viewDidLoad
@@ -22,14 +22,16 @@
 
     playerList = [[NSMutableArray alloc] init]; // I don't know what I am doing!
     levelConfigList = [[NSMutableArray alloc] init]; // I don't know what I am doing!
-    applauseDataList = [[NSMutableArray alloc] init]; // I don't know what I am doing!
+    applauseDataList = [[NSMutableArray alloc] init];// I still don't know what I am doing!
     
     [self initializeLevelConfigData];
     [self initializeApplauseData];
 
     [tapGestureLevel1 requireGestureRecognizerToFail:tapGestureLevel2];
+    [tapGestureLevel1 requireGestureRecognizerToFail:tapGestureLevel3];
+    [tapGestureLevel2 requireGestureRecognizerToFail:tapGestureLevel3];
 
-    //write ready GO
+    //write ready GO TODO://BDNF 
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,7 +61,17 @@
 - (IBAction)tapLevel2Catched:(id)sender
 {    
     [self changeToStartColor];
+    [self playLevelSound:0];
     [self playLevelSound:1];
+}
+
+
+- (IBAction)tapLevel3Catched:(id)sender
+{
+    [self changeToStartColor];
+    [self playLevelSound:0];
+    [self playLevelSound:1];    
+    [self playLevelSound:2];
 }
 
 //------PRI
@@ -117,18 +129,29 @@
 - (void) initializeLevelConfigData
 {
     NSMutableDictionary *level1Config = [[NSMutableDictionary alloc] init];
-    [level1Config setObject:@"67233967" forKey:@"trackId"];
+    [level1Config setObject:@"5966774" forKey:@"trackId"];
     [level1Config setObject:@"3" forKey:@"duration"];
     [level1Config setObject:@"0.6" forKey:@"minInterval"];
     [level1Config setObject:@"0" forKey:@"lastRecognitionTime"];
-    [levelConfigList addObject: level1Config];
-    
+    [levelConfigList addObject:level1Config];
+    [applauseDataList addObject:[NSData data]];
+
     NSMutableDictionary *level2Config = [[NSMutableDictionary alloc] init];
-    [level2Config setObject:@"5985102" forKey:@"trackId"];
+    [level2Config setObject:@"54424258" forKey:@"trackId"];
     [level2Config setObject:@"5" forKey:@"duration"];
     [level2Config setObject:@"1.5" forKey:@"minInterval"];
     [level2Config setObject:@"0" forKey:@"lastRecognitionTime"];
-    [levelConfigList addObject: level2Config];
+    [levelConfigList addObject:level2Config];
+    [applauseDataList addObject:[NSData data]];
+
+    NSMutableDictionary *level3Config = [[NSMutableDictionary alloc] init];
+    [level3Config setObject:@"35074582" forKey:@"trackId"];
+    [level3Config setObject:@"5" forKey:@"duration"];
+    [level3Config setObject:@"2" forKey:@"minInterval"];
+    [level3Config setObject:@"0" forKey:@"lastRecognitionTime"];
+    [levelConfigList addObject:level3Config];
+    [applauseDataList addObject:[NSData data]];
+
 }
 
 - (void) initializeApplauseData
@@ -150,7 +173,9 @@
                  withAccount:nil
       sendingProgressHandler:nil
              responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                 [applauseDataList addObject: data];
+
+                [applauseDataList replaceObjectAtIndex:level  withObject:data];
+                 
                  NSLog(@"Applause Data LOADED LEVEL:  %d", level);
              }];
 }

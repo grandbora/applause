@@ -16,11 +16,13 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Gvc-GE-zoj" appends="YES" id="1qL-95-Oo2"/>
                             <outletCollection property="gestureRecognizers" destination="8AC-Ra-h2p" appends="YES" id="7I6-Vm-A9l"/>
+                            <outletCollection property="gestureRecognizers" destination="VpU-6x-Jne" appends="YES" id="5rO-TB-RZ2"/>
                         </connections>
                     </view>
                     <connections>
                         <outlet property="tapGestureLevel1" destination="Gvc-GE-zoj" id="NPh-ty-aeP"/>
                         <outlet property="tapGestureLevel2" destination="8AC-Ra-h2p" id="zqL-MS-7xV"/>
+                        <outlet property="tapGestureLevel3" destination="VpU-6x-Jne" id="OcA-BB-EMY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -29,9 +31,14 @@
                         <action selector="tapLevel1Catched:" destination="2" id="hye-GS-cBF"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="8AC-Ra-h2p">
+                <tapGestureRecognizer numberOfTapsRequired="4" id="8AC-Ra-h2p">
                     <connections>
                         <action selector="tapLevel2Catched:" destination="2" id="Byx-Yu-ffu"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="5" id="VpU-6x-Jne">
+                    <connections>
+                        <action selector="tapLevel3Catched:" destination="2" id="cLh-eV-9nl"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -43,8 +50,10 @@
             <relationships>
                 <relationship kind="action" name="tapLevel1Catched:"/>
                 <relationship kind="action" name="tapLevel2Catched:"/>
+                <relationship kind="action" name="tapLevel3Catched:"/>
                 <relationship kind="outlet" name="tapGestureLevel1" candidateClass="UITapGestureRecognizer"/>
                 <relationship kind="outlet" name="tapGestureLevel2" candidateClass="UITapGestureRecognizer"/>
+                <relationship kind="outlet" name="tapGestureLevel3" candidateClass="UITapGestureRecognizer"/>
             </relationships>
         </class>
     </classes>

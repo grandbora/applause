@@ -13,8 +13,12 @@
 
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureLevel1;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureLevel2;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureLevel3;
+
 - (IBAction)tapLevel1Catched:(id)sender;
 - (IBAction)tapLevel2Catched:(id)sender;
+- (IBAction)tapLevel3Catched:(id)sender;
+
 @property (nonatomic, strong) NSMutableArray *playerList;
 @property (nonatomic, strong) NSMutableArray *levelConfigList;
 @property (nonatomic, strong) NSMutableArray *applauseDataList;
