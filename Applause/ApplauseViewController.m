@@ -96,6 +96,10 @@
     [playerList addObject: player];
     NSLog(@"Applause played LEVEL:  %d", level);
     //NSLog(@"Number of players :  %d", [playerList count]); //BDNF clear old players
+    
+    NSMutableDictionary *config = [levelConfigList objectAtIndex:level];
+    double duration = [[config objectForKey:@"duration"] doubleValue];
+    [NSTimer scheduledTimerWithTimeInterval:duration target:player selector:@selector(stop) userInfo:nil repeats:NO];
 }
 
 //------UTIL
@@ -121,7 +125,7 @@
     
     NSMutableDictionary *level2Config = [[NSMutableDictionary alloc] init];
     [level2Config setObject:@"5985102" forKey:@"trackId"];
-    [level2Config setObject:@"4" forKey:@"duration"];
+    [level2Config setObject:@"5" forKey:@"duration"];
     [level2Config setObject:@"1.5" forKey:@"minInterval"];
     [level2Config setObject:@"0" forKey:@"lastRecognitionTime"];
     [levelConfigList addObject: level2Config];

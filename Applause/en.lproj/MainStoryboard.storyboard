@@ -29,7 +29,7 @@
                         <action selector="tapLevel1Catched:" destination="2" id="hye-GS-cBF"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="3" id="8AC-Ra-h2p">
+                <tapGestureRecognizer numberOfTapsRequired="2" id="8AC-Ra-h2p">
                     <connections>
                         <action selector="tapLevel2Catched:" destination="2" id="Byx-Yu-ffu"/>
                     </connections>
