@@ -233,7 +233,7 @@
         }
     };
 
-    NSString *resourceURL = [NSString stringWithFormat:@"https://api.soundcloud.com/tracks.json?q=%@&client_id=%@", @"applause", @"fa1fd2df5a17a560f8456aed4016160a"];
+    NSString *resourceURL = [NSString stringWithFormat:@"https://api.soundcloud.com/tracks.json?q=%@&duration[to]=60000&client_id=%@", @"applause", @"fa1fd2df5a17a560f8456aed4016160a"];
     [SCRequest performMethod:SCRequestMethodGET
                   onResource:[NSURL URLWithString:resourceURL]
              usingParameters:nil

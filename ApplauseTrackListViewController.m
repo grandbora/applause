@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Bora Tunca. All rights reserved.
 //
 
+#import "SCUI.h"
 #import "ApplauseTrackListViewController.h"
 
 @interface ApplauseTrackListViewController ()
@@ -13,7 +14,7 @@
 @end
 
 @implementation ApplauseTrackListViewController
-@synthesize tracks;
+@synthesize tracks, player;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -114,13 +115,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
-
+    [player stop];
+    
+    NSDictionary *track = [self.tracks objectAtIndex:indexPath.row];
+    NSString *streamURL = [NSString stringWithFormat:@"%@?client_id=%@", [track objectForKey:@"stream_url"], @"fa1fd2df5a17a560f8456aed4016160a"];
+    
+    [SCRequest performMethod:SCRequestMethodGET
+                  onResource:[NSURL URLWithString:streamURL]
+             usingParameters:nil
+                 withAccount:nil
+      sendingProgressHandler:nil
+             responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                 NSError *playerError;
+                 player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
+                 [player play];
+             }];}
 @end

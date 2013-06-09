@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface ApplauseTrackListViewController : UITableViewController <AVAudioPlayerDelegate>
+@interface ApplauseTrackListViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *tracks;
+@property (nonatomic, strong) AVAudioPlayer *player;
 
 @end
