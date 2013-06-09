@@ -32,8 +32,6 @@
     [tapGestureLevel1 requireGestureRecognizerToFail:tapGestureLevel2];
     [tapGestureLevel1 requireGestureRecognizerToFail:tapGestureLevel3];
     [tapGestureLevel2 requireGestureRecognizerToFail:tapGestureLevel3];
-
-    //write ready GO TODO://BDNF 
 }
 
 - (void)didReceiveMemoryWarning
@@ -112,7 +110,7 @@
     [player play];
     [playerList addObject: player];
     NSLog(@"Applause played LEVEL:  %d", level);
-    //NSLog(@"Number of players :  %d", [playerList count]); //BDNF clear old players
+    //NSLog(@"Number of players :  %d", [playerList count]); todo://BDNF clear old players
     
     NSMutableDictionary *config = [levelConfigList objectAtIndex:level];
     double duration = [[config objectForKey:@"duration"] doubleValue];
@@ -181,7 +179,6 @@
     [level3Config setObject:@"0" forKey:@"lastRecognitionTime"];
     [levelConfigList addObject:level3Config];
     [applauseDataList addObject:[NSData data]];
-
 }
 
 - (void) initializeApplauseData

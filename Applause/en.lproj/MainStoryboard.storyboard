@@ -53,7 +53,7 @@
                         <action selector="tapLevel2Catched:" destination="2" id="Byx-Yu-ffu"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="3" id="VpU-6x-Jne">
+                <tapGestureRecognizer numberOfTapsRequired="8" id="VpU-6x-Jne">
                     <connections>
                         <action selector="tapLevel3Catched:" destination="2" id="cLh-eV-9nl"/>
                     </connections>
