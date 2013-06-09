@@ -14,4 +14,7 @@
 @property (nonatomic, strong) NSArray *tracks;
 @property (nonatomic, strong) AVAudioPlayer *player;
 
+@property (nonatomic, strong) NSTimer *tapTimer;
+@property int tapCount, tappedRow;
+
 @end

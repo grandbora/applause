@@ -78,6 +78,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="504" y="-53"/>
         </scene>
         <!--Applause Track List View Controller-->
         <scene sceneID="85R-mc-jam">
@@ -103,33 +104,15 @@
                             <outlet property="delegate" destination="2Tn-M8-qof" id="dIP-cI-cxt"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="2" kind="modal" identifier="SaveSegue" id="cQk-r0-vuw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0a-mv-ahT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="647" y="-2"/>
+            <point key="canvasLocation" x="-111" y="-34"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="ApplauseTrackListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ApplauseTrackListViewController.h"/>
-        </class>
-        <class className="ApplauseViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ApplauseViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="openSettings:"/>
-                <relationship kind="action" name="tapLevel1Catched:"/>
-                <relationship kind="action" name="tapLevel2Catched:"/>
-                <relationship kind="action" name="tapLevel3Catched:"/>
-                <relationship kind="outlet" name="infoBar" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tapGestureLevel1" candidateClass="UITapGestureRecognizer"/>
-                <relationship kind="outlet" name="tapGestureLevel2" candidateClass="UITapGestureRecognizer"/>
-                <relationship kind="outlet" name="tapGestureLevel3" candidateClass="UITapGestureRecognizer"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

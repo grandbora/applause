@@ -15,6 +15,7 @@
 
 @implementation ApplauseTrackListViewController
 @synthesize tracks, player;
+@synthesize tapTimer, tapCount, tappedRow;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -115,9 +116,54 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if(tapCount == 1 && tapTimer != nil && tappedRow == indexPath.row){//double tap
+        [tapTimer invalidate];
+        [self setTapTimer:nil];
+        
+        [player stop];
+        
+        NSDictionary *track = [self.tracks objectAtIndex:indexPath.row];
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:[track objectForKey:@"id"] forKey:@"trackId"];
+        [defaults synchronize];
+        NSLog(@"DATA SAVED:  %@", [track objectForKey:@"id"]);
+
+        [self performSegueWithIdentifier:@"SaveSegue" sender:self];
+        
+    }
+    else if(tapCount == 0){ // This is the first tap. If there is no tap till tapTimer is fired, it is a single tap
+        tapCount = tapCount + 1;
+        tappedRow = indexPath.row;
+        [self setTapTimer:[NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(tapTimerFired:) userInfo:nil repeats:NO]];
+    }
+    else if(tappedRow != indexPath.row){ //tap on new row
+        
+        [self playSample:indexPath.row];
+        
+        tapCount = 0;
+        if(tapTimer != nil){
+            [tapTimer invalidate];
+            [self setTapTimer:nil];
+        }
+    }
+}
+
+- (void)tapTimerFired:(NSTimer *)aTimer //timer fired, there was a single tap on indexPath.row = tappedRow
+{
+    [self playSample:tappedRow];
+    
+    if(tapTimer != nil){
+        tapCount = 0;
+        tappedRow = -1;
+    }
+}
+
+- (void)playSample:(int)row
+{
     [player stop];
     
-    NSDictionary *track = [self.tracks objectAtIndex:indexPath.row];
+    NSDictionary *track = [self.tracks objectAtIndex:row];
     NSString *streamURL = [NSString stringWithFormat:@"%@?client_id=%@", [track objectForKey:@"stream_url"], @"fa1fd2df5a17a560f8456aed4016160a"];
     
     [SCRequest performMethod:SCRequestMethodGET
@@ -129,5 +175,8 @@
                  NSError *playerError;
                  player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
                  [player play];
-             }];}
+             }];
+}
+
+
 @end

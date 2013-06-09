@@ -157,8 +157,17 @@
 //------INIT
 - (void) initializeLevelConfigData
 {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *trackId = @"5966774";
+    if (nil != [defaults objectForKey:@"trackId"])
+    {
+        trackId = [defaults objectForKey:@"trackId"];
+        NSLog(@"DATA LOADED:  %@", trackId);
+    }
+    
     NSMutableDictionary *level1Config = [[NSMutableDictionary alloc] init];
-    [level1Config setObject:@"5966774" forKey:@"trackId"];
+    [level1Config setObject:trackId forKey:@"trackId"];
     [level1Config setObject:@"3" forKey:@"duration"];
     [level1Config setObject:@"0.4" forKey:@"minInterval"];
     [level1Config setObject:@"0" forKey:@"lastRecognitionTime"];
