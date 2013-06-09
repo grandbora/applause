@@ -15,7 +15,7 @@
 
 @implementation ApplauseViewController
 @synthesize tapGestureLevel1, tapGestureLevel2, tapGestureLevel3, infoBar;
-@synthesize playerList, levelConfigList, applauseDataList, loadedApplauseCount;
+@synthesize playerList, levelConfigList, applauseDataList, loadedApplauseCount, settingsResponse;
 
 - (void)viewDidLoad
 {
@@ -232,13 +232,11 @@
                                              JSONObjectWithData:data
                                              options:0
                                              error:&jsonError];
-        if (!jsonError && [jsonResponse isKindOfClass:[NSArray class]]) {
-            ApplauseTrackListViewController *trackListVC;
-            trackListVC = [[ApplauseTrackListViewController alloc] init];
-            [self.storyboard instantiateViewControllerWithIdentifier:@"ApplauseTrackListViewController"];
-            trackListVC.tracks = (NSArray *)jsonResponse;
-            [self presentViewController:trackListVC
-                               animated:YES completion:nil];
+        
+        if (!jsonError && [jsonResponse isKindOfClass:[NSArray class]])
+        {
+             settingsResponse = (NSArray *)jsonResponse;
+             [self performSegueWithIdentifier:@"forwardSegue" sender:self];
         }
     };
 
@@ -249,6 +247,12 @@
                  withAccount:nil
       sendingProgressHandler:nil
              responseHandler:handler];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ApplauseTrackListViewController *trackListVC = segue.destinationViewController;
+    trackListVC.tracks = (NSArray *)settingsResponse;
 }
 
 @end

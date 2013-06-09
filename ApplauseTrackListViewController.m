@@ -129,8 +129,7 @@
         [defaults synchronize];
         NSLog(@"DATA SAVED:  %@", [track objectForKey:@"id"]);
 
-        [self performSegueWithIdentifier:@"SaveSegue" sender:self];
-        
+        [self performSegueWithIdentifier:@"backwardSegue" sender:self];
     }
     else if(tapCount == 0){ // This is the first tap. If there is no tap till tapTimer is fired, it is a single tap
         tapCount = tapCount + 1;

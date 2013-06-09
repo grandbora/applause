@@ -26,4 +26,6 @@
 @property (nonatomic, strong) NSMutableArray *levelConfigList;
 @property (nonatomic, strong) NSMutableArray *applauseDataList;
 @property int loadedApplauseCount;
+
+@property (nonatomic, strong) NSArray *settingsResponse;
 @end
