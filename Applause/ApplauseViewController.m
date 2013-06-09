@@ -7,6 +7,7 @@
 //
 
 #import "SCUI.h"
+#import "ApplauseTrackListViewController.h"
 #import "ApplauseViewController.h"
 
 @interface ApplauseViewController ()
@@ -210,6 +211,35 @@
                  
                  NSLog(@"Applause Data LOADED LEVEL:  %d", level);
              }];
+}
+
+//------SETTINGS
+- (IBAction)openSettings:(id)sender
+{
+    SCRequestResponseHandler handler;
+    handler = ^(NSURLResponse *response, NSData *data, NSError *error) {
+        NSError *jsonError = nil;
+        NSJSONSerialization *jsonResponse = [NSJSONSerialization
+                                             JSONObjectWithData:data
+                                             options:0
+                                             error:&jsonError];
+        if (!jsonError && [jsonResponse isKindOfClass:[NSArray class]]) {
+            ApplauseTrackListViewController *trackListVC;
+            trackListVC = [[ApplauseTrackListViewController alloc] init];
+            [self.storyboard instantiateViewControllerWithIdentifier:@"ApplauseTrackListViewController"];
+            trackListVC.tracks = (NSArray *)jsonResponse;
+            [self presentViewController:trackListVC
+                               animated:YES completion:nil];
+        }
+    };
+
+    NSString *resourceURL = [NSString stringWithFormat:@"https://api.soundcloud.com/tracks.json?q=%@&client_id=%@", @"applause", @"fa1fd2df5a17a560f8456aed4016160a"];
+    [SCRequest performMethod:SCRequestMethodGET
+                  onResource:[NSURL URLWithString:resourceURL]
+             usingParameters:nil
+                 withAccount:nil
+      sendingProgressHandler:nil
+             responseHandler:handler];
 }
 
 @end

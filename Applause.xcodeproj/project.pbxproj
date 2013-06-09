@@ -31,6 +31,7 @@
 		840F08F417635D5200AC50EA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840F08F317635D5200AC50EA /* QuartzCore.framework */; };
 		840F08F617635D5A00AC50EA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840F08F517635D5A00AC50EA /* Security.framework */; };
 		840F08F817635DC800AC50EA /* SoundCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 840F08F717635DC800AC50EA /* SoundCloud.bundle */; };
+		843706D217640858009B8257 /* ApplauseTrackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843706D117640858009B8257 /* ApplauseTrackListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +165,8 @@
 		840F08F317635D5200AC50EA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		840F08F517635D5A00AC50EA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		840F08F717635DC800AC50EA /* SoundCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SoundCloud.bundle; path = ../CocoaSoundCloudUI/SoundCloud.bundle; sourceTree = "<group>"; };
+		843706D017640858009B8257 /* ApplauseTrackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplauseTrackListViewController.h; sourceTree = SOURCE_ROOT; };
+		843706D117640858009B8257 /* ApplauseTrackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplauseTrackListViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +237,8 @@
 		840F0893176353E200AC50EA /* Applause */ = {
 			isa = PBXGroup;
 			children = (
+				843706D017640858009B8257 /* ApplauseTrackListViewController.h */,
+				843706D117640858009B8257 /* ApplauseTrackListViewController.m */,
 				840F089C176353E200AC50EA /* ApplauseAppDelegate.h */,
 				840F089D176353E200AC50EA /* ApplauseAppDelegate.m */,
 				840F08A5176353E200AC50EA /* MainStoryboard.storyboard */,
@@ -467,6 +472,7 @@
 				840F089A176353E200AC50EA /* main.m in Sources */,
 				840F089E176353E200AC50EA /* ApplauseAppDelegate.m in Sources */,
 				840F08AA176353E200AC50EA /* ApplauseViewController.m in Sources */,
+				843706D217640858009B8257 /* ApplauseTrackListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

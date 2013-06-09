@@ -10,6 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface ApplauseViewController : UIViewController
+- (IBAction)openSettings:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UILabel *infoBar;
 
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureLevel1;
