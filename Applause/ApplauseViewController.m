@@ -13,13 +13,15 @@
 @end
 
 @implementation ApplauseViewController
-@synthesize tapGestureLevel1, tapGestureLevel2, tapGestureLevel3;
-@synthesize playerList, levelConfigList, applauseDataList;
+@synthesize tapGestureLevel1, tapGestureLevel2, tapGestureLevel3, infoBar;
+@synthesize playerList, levelConfigList, applauseDataList, loadedApplauseCount;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
+    [self changeToStartColor];
+    
     playerList = [[NSMutableArray alloc] init]; // I don't know what I am doing!
     levelConfigList = [[NSMutableArray alloc] init]; // I don't know what I am doing!
     applauseDataList = [[NSMutableArray alloc] init];// I still don't know what I am doing!
@@ -55,12 +57,14 @@
 - (IBAction)tapLevel1Catched:(id)sender
 {
     [self changeToStartColor];
+    [self showLevelInfo:0];
     [self playLevelSound:0];
 }
 
 - (IBAction)tapLevel2Catched:(id)sender
 {    
     [self changeToStartColor];
+    [self showLevelInfo:1];
     [self playLevelSound:0];
     [self playLevelSound:1];
 }
@@ -69,6 +73,7 @@
 - (IBAction)tapLevel3Catched:(id)sender
 {
     [self changeToStartColor];
+    [self showLevelInfo:2];
     [self playLevelSound:0];
     [self playLevelSound:1];    
     [self playLevelSound:2];
@@ -117,12 +122,37 @@
 //------UTIL
 - (void) changeToStartColor
 {
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [[UIColor alloc] initWithRed:120/255.f green:240/255.f blue:240/255.f alpha:1];
 }
 
 - (void) changeToTapColor
 {
     self.view.backgroundColor = [UIColor redColor];
+}
+
+- (void) addDotToInfo
+{
+    infoBar.text = [infoBar.text stringByAppendingString:@" ."];
+}
+
+- (void) showGoInfo
+{
+    infoBar.text = @"GO !";
+}
+
+- (void) showLevelInfo:(int)level
+{
+    switch (level) {
+        case 0:
+            infoBar.text = @"* BEGINNER *";
+            break;
+        case 1:
+            infoBar.text = @"** WILD **";
+            break;
+        case 2:
+            infoBar.text = @"*** ULTIMATE ***";
+            break;
+    }
 }
 
 //------INIT
@@ -131,7 +161,7 @@
     NSMutableDictionary *level1Config = [[NSMutableDictionary alloc] init];
     [level1Config setObject:@"5966774" forKey:@"trackId"];
     [level1Config setObject:@"3" forKey:@"duration"];
-    [level1Config setObject:@"0.6" forKey:@"minInterval"];
+    [level1Config setObject:@"0.4" forKey:@"minInterval"];
     [level1Config setObject:@"0" forKey:@"lastRecognitionTime"];
     [levelConfigList addObject:level1Config];
     [applauseDataList addObject:[NSData data]];
@@ -139,7 +169,7 @@
     NSMutableDictionary *level2Config = [[NSMutableDictionary alloc] init];
     [level2Config setObject:@"54424258" forKey:@"trackId"];
     [level2Config setObject:@"5" forKey:@"duration"];
-    [level2Config setObject:@"1.5" forKey:@"minInterval"];
+    [level2Config setObject:@"1.3" forKey:@"minInterval"];
     [level2Config setObject:@"0" forKey:@"lastRecognitionTime"];
     [levelConfigList addObject:level2Config];
     [applauseDataList addObject:[NSData data]];
@@ -147,7 +177,7 @@
     NSMutableDictionary *level3Config = [[NSMutableDictionary alloc] init];
     [level3Config setObject:@"35074582" forKey:@"trackId"];
     [level3Config setObject:@"5" forKey:@"duration"];
-    [level3Config setObject:@"2" forKey:@"minInterval"];
+    [level3Config setObject:@"2.5" forKey:@"minInterval"];
     [level3Config setObject:@"0" forKey:@"lastRecognitionTime"];
     [levelConfigList addObject:level3Config];
     [applauseDataList addObject:[NSData data]];
@@ -175,6 +205,11 @@
              responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
 
                 [applauseDataList replaceObjectAtIndex:level  withObject:data];
+                [self addDotToInfo];
+                loadedApplauseCount++;
+                if ([levelConfigList count] == loadedApplauseCount) {
+                    [self showGoInfo];
+                }
                  
                  NSLog(@"Applause Data LOADED LEVEL:  %d", level);
              }];

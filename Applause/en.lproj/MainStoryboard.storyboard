@@ -11,8 +11,24 @@
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GET READY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqz-IR-zWZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="oGi-Gr-Gdq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="cqz-IR-zWZ" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="DNO-fD-CXT"/>
+                            <constraint firstItem="cqz-IR-zWZ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="186" id="WGi-O2-eNA"/>
+                            <constraint firstItem="cqz-IR-zWZ" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="mLA-x2-6RC"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Gvc-GE-zoj" appends="YES" id="1qL-95-Oo2"/>
                             <outletCollection property="gestureRecognizers" destination="8AC-Ra-h2p" appends="YES" id="7I6-Vm-A9l"/>
@@ -20,6 +36,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="infoBar" destination="cqz-IR-zWZ" id="wym-5T-PU7"/>
                         <outlet property="tapGestureLevel1" destination="Gvc-GE-zoj" id="NPh-ty-aeP"/>
                         <outlet property="tapGestureLevel2" destination="8AC-Ra-h2p" id="zqL-MS-7xV"/>
                         <outlet property="tapGestureLevel3" destination="VpU-6x-Jne" id="OcA-BB-EMY"/>
@@ -36,7 +53,7 @@
                         <action selector="tapLevel2Catched:" destination="2" id="Byx-Yu-ffu"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer numberOfTapsRequired="8" id="VpU-6x-Jne">
+                <tapGestureRecognizer numberOfTapsRequired="3" id="VpU-6x-Jne">
                     <connections>
                         <action selector="tapLevel3Catched:" destination="2" id="cLh-eV-9nl"/>
                     </connections>
@@ -51,10 +68,14 @@
                 <relationship kind="action" name="tapLevel1Catched:"/>
                 <relationship kind="action" name="tapLevel2Catched:"/>
                 <relationship kind="action" name="tapLevel3Catched:"/>
+                <relationship kind="outlet" name="infoBar" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tapGestureLevel1" candidateClass="UITapGestureRecognizer"/>
                 <relationship kind="outlet" name="tapGestureLevel2" candidateClass="UITapGestureRecognizer"/>
                 <relationship kind="outlet" name="tapGestureLevel3" candidateClass="UITapGestureRecognizer"/>
             </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

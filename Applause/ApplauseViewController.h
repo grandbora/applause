@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface ApplauseViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *infoBar;
 
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureLevel1;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureLevel2;
@@ -22,4 +23,5 @@
 @property (nonatomic, strong) NSMutableArray *playerList;
 @property (nonatomic, strong) NSMutableArray *levelConfigList;
 @property (nonatomic, strong) NSMutableArray *applauseDataList;
+@property int loadedApplauseCount;
 @end
