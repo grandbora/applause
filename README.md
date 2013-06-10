@@ -3,9 +3,4 @@ applause
 
 an ios app to applause for you
 
-
--dirty
--levels
-  
-  go ready
-  level increase
+Connects to soundcloud to fetch applause sounds.
