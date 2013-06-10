@@ -31,6 +31,8 @@
 		843706D217640858009B8257 /* ApplauseTrackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843706D117640858009B8257 /* ApplauseTrackListViewController.m */; };
 		845CA9931765E55600B6BD3F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CA9911765E54800B6BD3F /* Default.png */; };
 		845CA9951765E5AE00B6BD3F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CA9941765E5AE00B6BD3F /* Default@2x.png */; };
+		84849CB41766043000AD053D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84849CB31766043000AD053D /* Default-568h@2x.png */; };
+		84849CBA1766047E00AD053D /* Default@2x copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 84849CB91766047E00AD053D /* Default@2x copy.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +170,8 @@
 		843706D117640858009B8257 /* ApplauseTrackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplauseTrackListViewController.m; sourceTree = SOURCE_ROOT; };
 		845CA9911765E54800B6BD3F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		845CA9941765E5AE00B6BD3F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		84849CB31766043000AD053D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		84849CB91766047E00AD053D /* Default@2x copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x copy.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,8 @@
 		840F0881176353E200AC50EA = {
 			isa = PBXGroup;
 			children = (
+				84849CB91766047E00AD053D /* Default@2x copy.png */,
+				84849CB31766043000AD053D /* Default-568h@2x.png */,
 				845CA9941765E5AE00B6BD3F /* Default@2x.png */,
 				845CA9911765E54800B6BD3F /* Default.png */,
 				840F0893176353E200AC50EA /* Applause */,
@@ -461,6 +467,8 @@
 				840F08F817635DC800AC50EA /* SoundCloud.bundle in Resources */,
 				845CA9931765E55600B6BD3F /* Default.png in Resources */,
 				845CA9951765E5AE00B6BD3F /* Default@2x.png in Resources */,
+				84849CB41766043000AD053D /* Default-568h@2x.png in Resources */,
+				84849CBA1766047E00AD053D /* Default@2x copy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
