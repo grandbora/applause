@@ -13,9 +13,6 @@
 		840F0898176353E200AC50EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 840F0896176353E200AC50EA /* InfoPlist.strings */; };
 		840F089A176353E200AC50EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F0899176353E200AC50EA /* main.m */; };
 		840F089E176353E200AC50EA /* ApplauseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F089D176353E200AC50EA /* ApplauseAppDelegate.m */; };
-		840F08A0176353E200AC50EA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 840F089F176353E200AC50EA /* Default.png */; };
-		840F08A2176353E200AC50EA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840F08A1176353E200AC50EA /* Default@2x.png */; };
-		840F08A4176353E200AC50EA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840F08A3176353E200AC50EA /* Default-568h@2x.png */; };
 		840F08A7176353E200AC50EA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840F08A5176353E200AC50EA /* MainStoryboard.storyboard */; };
 		840F08AA176353E200AC50EA /* ApplauseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F08A9176353E200AC50EA /* ApplauseViewController.m */; };
 		840F08B11763596000AC50EA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840F08B01763596000AC50EA /* AVFoundation.framework */; };
@@ -32,6 +29,8 @@
 		840F08F617635D5A00AC50EA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840F08F517635D5A00AC50EA /* Security.framework */; };
 		840F08F817635DC800AC50EA /* SoundCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 840F08F717635DC800AC50EA /* SoundCloud.bundle */; };
 		843706D217640858009B8257 /* ApplauseTrackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843706D117640858009B8257 /* ApplauseTrackListViewController.m */; };
+		845CA9931765E55600B6BD3F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CA9911765E54800B6BD3F /* Default.png */; };
+		845CA9951765E5AE00B6BD3F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CA9941765E5AE00B6BD3F /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +166,8 @@
 		840F08F717635DC800AC50EA /* SoundCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SoundCloud.bundle; path = ../CocoaSoundCloudUI/SoundCloud.bundle; sourceTree = "<group>"; };
 		843706D017640858009B8257 /* ApplauseTrackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplauseTrackListViewController.h; sourceTree = SOURCE_ROOT; };
 		843706D117640858009B8257 /* ApplauseTrackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplauseTrackListViewController.m; sourceTree = SOURCE_ROOT; };
+		845CA9911765E54800B6BD3F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		845CA9941765E5AE00B6BD3F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +199,8 @@
 		840F0881176353E200AC50EA = {
 			isa = PBXGroup;
 			children = (
+				845CA9941765E5AE00B6BD3F /* Default@2x.png */,
+				845CA9911765E54800B6BD3F /* Default.png */,
 				840F0893176353E200AC50EA /* Applause */,
 				840F088C176353E200AC50EA /* Frameworks */,
 				840F088B176353E200AC50EA /* Products */,
@@ -454,11 +457,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				840F0898176353E200AC50EA /* InfoPlist.strings in Resources */,
-				840F08A0176353E200AC50EA /* Default.png in Resources */,
-				840F08A2176353E200AC50EA /* Default@2x.png in Resources */,
-				840F08A4176353E200AC50EA /* Default-568h@2x.png in Resources */,
 				840F08A7176353E200AC50EA /* MainStoryboard.storyboard in Resources */,
 				840F08F817635DC800AC50EA /* SoundCloud.bundle in Resources */,
+				845CA9931765E55600B6BD3F /* Default.png in Resources */,
+				845CA9951765E5AE00B6BD3F /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
