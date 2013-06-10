@@ -605,6 +605,8 @@
 		840F08AF176353E200AC50EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bora Tunca (7G84SED32W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bora Tunca (7G84SED32W)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Applause/Applause-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$PROJECT_DIR/**";
@@ -615,6 +617,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "CC2243C2-42DE-4C2D-82B2-0E29B6B876CF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CC2243C2-42DE-4C2D-82B2-0E29B6B876CF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
