@@ -29,10 +29,11 @@
 		840F08F617635D5A00AC50EA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840F08F517635D5A00AC50EA /* Security.framework */; };
 		840F08F817635DC800AC50EA /* SoundCloud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 840F08F717635DC800AC50EA /* SoundCloud.bundle */; };
 		843706D217640858009B8257 /* ApplauseTrackListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843706D117640858009B8257 /* ApplauseTrackListViewController.m */; };
-		845CA9931765E55600B6BD3F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CA9911765E54800B6BD3F /* Default.png */; };
-		845CA9951765E5AE00B6BD3F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 845CA9941765E5AE00B6BD3F /* Default@2x.png */; };
-		84849CB41766043000AD053D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84849CB31766043000AD053D /* Default-568h@2x.png */; };
-		84849CBA1766047E00AD053D /* Default@2x copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 84849CB91766047E00AD053D /* Default@2x copy.png */; };
+		845B699D1774D84C00056D9C /* happy_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B699C1774D84C00056D9C /* happy_face.png */; };
+		845B699F1774D8BE00056D9C /* happy_face_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B699E1774D8BE00056D9C /* happy_face_114.png */; };
+		845B69A11774D91200056D9C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B69A01774D91200056D9C /* Default.png */; };
+		845B69A31774D91B00056D9C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B69A21774D91B00056D9C /* Default@2x.png */; };
+		845B69A51774D93800056D9C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 845B69A41774D93800056D9C /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,9 +148,6 @@
 		840F089B176353E200AC50EA /* Applause-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Applause-Prefix.pch"; sourceTree = "<group>"; };
 		840F089C176353E200AC50EA /* ApplauseAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplauseAppDelegate.h; sourceTree = "<group>"; };
 		840F089D176353E200AC50EA /* ApplauseAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplauseAppDelegate.m; sourceTree = "<group>"; };
-		840F089F176353E200AC50EA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		840F08A1176353E200AC50EA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		840F08A3176353E200AC50EA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		840F08A6176353E200AC50EA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		840F08A8176353E200AC50EA /* ApplauseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplauseViewController.h; sourceTree = "<group>"; };
 		840F08A9176353E200AC50EA /* ApplauseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplauseViewController.m; sourceTree = "<group>"; };
@@ -168,10 +166,11 @@
 		840F08F717635DC800AC50EA /* SoundCloud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SoundCloud.bundle; path = ../CocoaSoundCloudUI/SoundCloud.bundle; sourceTree = "<group>"; };
 		843706D017640858009B8257 /* ApplauseTrackListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplauseTrackListViewController.h; sourceTree = SOURCE_ROOT; };
 		843706D117640858009B8257 /* ApplauseTrackListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplauseTrackListViewController.m; sourceTree = SOURCE_ROOT; };
-		845CA9911765E54800B6BD3F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		845CA9941765E5AE00B6BD3F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		84849CB31766043000AD053D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		84849CB91766047E00AD053D /* Default@2x copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x copy.png"; sourceTree = "<group>"; };
+		845B699C1774D84C00056D9C /* happy_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy_face.png; sourceTree = "<group>"; };
+		845B699E1774D8BE00056D9C /* happy_face_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy_face_114.png; sourceTree = "<group>"; };
+		845B69A01774D91200056D9C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		845B69A21774D91B00056D9C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		845B69A41774D93800056D9C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,10 +202,11 @@
 		840F0881176353E200AC50EA = {
 			isa = PBXGroup;
 			children = (
-				84849CB91766047E00AD053D /* Default@2x copy.png */,
-				84849CB31766043000AD053D /* Default-568h@2x.png */,
-				845CA9941765E5AE00B6BD3F /* Default@2x.png */,
-				845CA9911765E54800B6BD3F /* Default.png */,
+				845B69A41774D93800056D9C /* Default-568h@2x.png */,
+				845B69A21774D91B00056D9C /* Default@2x.png */,
+				845B69A01774D91200056D9C /* Default.png */,
+				845B699E1774D8BE00056D9C /* happy_face_114.png */,
+				845B699C1774D84C00056D9C /* happy_face.png */,
 				840F0893176353E200AC50EA /* Applause */,
 				840F088C176353E200AC50EA /* Frameworks */,
 				840F088B176353E200AC50EA /* Products */,
@@ -266,9 +266,6 @@
 				840F0896176353E200AC50EA /* InfoPlist.strings */,
 				840F0899176353E200AC50EA /* main.m */,
 				840F089B176353E200AC50EA /* Applause-Prefix.pch */,
-				840F089F176353E200AC50EA /* Default.png */,
-				840F08A1176353E200AC50EA /* Default@2x.png */,
-				840F08A3176353E200AC50EA /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -465,10 +462,11 @@
 				840F0898176353E200AC50EA /* InfoPlist.strings in Resources */,
 				840F08A7176353E200AC50EA /* MainStoryboard.storyboard in Resources */,
 				840F08F817635DC800AC50EA /* SoundCloud.bundle in Resources */,
-				845CA9931765E55600B6BD3F /* Default.png in Resources */,
-				845CA9951765E5AE00B6BD3F /* Default@2x.png in Resources */,
-				84849CB41766043000AD053D /* Default-568h@2x.png in Resources */,
-				84849CBA1766047E00AD053D /* Default@2x copy.png in Resources */,
+				845B699D1774D84C00056D9C /* happy_face.png in Resources */,
+				845B699F1774D8BE00056D9C /* happy_face_114.png in Resources */,
+				845B69A11774D91200056D9C /* Default.png in Resources */,
+				845B69A31774D91B00056D9C /* Default@2x.png in Resources */,
+				845B69A51774D93800056D9C /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,8 +611,8 @@
 		840F08AF176353E200AC50EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Bora Tunca (7G84SED32W)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Bora Tunca (7G84SED32W)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Applause/Applause-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "$PROJECT_DIR/**";
@@ -625,8 +623,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "CC2243C2-42DE-4C2D-82B2-0E29B6B876CF";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CC2243C2-42DE-4C2D-82B2-0E29B6B876CF";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

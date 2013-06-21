@@ -14,14 +14,13 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>Default.png</string>
-				<string>Default@2x.png</string>
-				<string>Default@2x copy.png</string>
+				<string>happy_face.png</string>
+				<string>happy_face_114.png</string>
 			</array>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>grandbora.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>grandbora.${PRODUCT_NAME:rfc1034identifier}Borris</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
